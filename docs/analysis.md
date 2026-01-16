@@ -1,19 +1,15 @@
 # P2P Bankovní uzel – analýza
 
-Autor: Martin Šilar
-Škola: SPŠE Ječná
-Datum: 16. 01. 2026
-Typ práce: Školní projekt
-
----
+Autor: Martin Šilar  
+Škola: SPŠE Ječná  
+Datum: 16. 01. 2026  
+Typ práce: Školní projekt  
 
 ## 1. Úvod
 
 Tento dokument slouží jako analýza bankovního uzlu, který funguje v decentralizované P2P síti.
 Cílem analýzy je popsat problém, kontext, uživatele a základní požadavky na systém, aniž by se řešilo konkrétní technické provedení.
 Analýza vychází ze zadání od vyučujícího a shrnuje, co musí výsledná aplikace splňovat.
-
----
 
 ## 2. Kontext a popis problému
 
@@ -23,17 +19,12 @@ Každý uzel spravuje vlastní bankovní účty a zároveň komunikuje s ostatn�
 Aby mohla síť správně fungovat, musí mít všechny uzly jednotně definované chování a způsob komunikace.
 Důležité je zejména to, aby bylo možné pracovat i s účty vedenými u jiné banky v síti a získat od ní správnou odpověď.
 
----
-
 ## 3. Cíloví uživatelé a aktéři
 
 Systém pracuje s následujícími aktéry:
 
-- **Uživatel**Osoba nebo nástroj, který se k aplikaci připojuje přes TCP klienta (např. PuTTY nebo telnet) a zadává příkazy ručně.
-- **Jiný bankovní uzel**
-  Jiná instance bankovní aplikace v P2P síti, se kterou probíhá vzájemná komunikace.
-
----
+- **Uživatel**: Osoba nebo nástroj, který se k aplikaci připojuje přes TCP klienta (např. PuTTY nebo telnet) a zadává příkazy ručně.
+- **Jiný bankovní uzel**: Jiná instance bankovní aplikace v P2P síti, se kterou probíhá vzájemná komunikace.
 
 ## 4. Funkční požadavky
 
@@ -46,8 +37,6 @@ Systém pracuje s následujícími aktéry:
 - **FR-07** Systém musí poskytovat informaci o celkové částce uložené v bance.
 - **FR-08** Systém musí poskytovat informaci o počtu klientů banky.
 - **FR-09** Pokud je příkaz určen pro jinou banku, systém musí zajistit jeho předání správnému bankovnímu uzlu (proxy režim).
-
----
 
 ## 5. Nefunkční požadavky
 
@@ -62,8 +51,6 @@ Systém pracuje s následujícími aktéry:
 - **NFR-09** Aplikace musí naslouchat na portu v rozsahu 65525–65535.
 - **NFR-10** Základní nastavení (port, IP adresa, timeouty) musí být konfigurovatelné.
 
----
-
 ## 6. Omezení a předpoklady
 
 - Systém není určen pro reálný bankovní provoz ani práci s opravdovými financemi.
@@ -71,8 +58,6 @@ Systém pracuje s následujícími aktéry:
 - Zabezpečení komunikace není hlavním cílem projektu.
 - Síť je tvořena omezeným počtem uzlů v rámci školního prostředí.
 - Aplikace nemá grafické uživatelské rozhraní a je ovládána pouze pomocí textových příkazů.
-
----
 
 ## 7. Shrnutí
 
